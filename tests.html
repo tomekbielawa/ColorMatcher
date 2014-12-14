@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Color Matcher</title>
+    <meta name="description" content="A Simple Logic Game">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/png" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/libs/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/libs/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="less/styles.css">
+
+    <link rel="stylesheet" type="text/css" href="js/lib/jasmine-2.0.0/jasmine.css">
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+
+<div id="color-matcher-app">
+
+    <header>
+        <div class="row t-center">
+            <h1><span class="glyphicon glyphicon-align-center"></span> COLOR MATCHER</h1>
+            <hr/>
+        </div>
+
+        <div id="start-button-container" class="row">
+            <div class="col-md-12 t-center">
+                <button class="btn btn-success btn-lg" id="start-game">Start</button>
+            </div>
+        </div>
+
+    </header>
+
+    <section id="stats"></section>
+
+    <section id="main">
+        <div id="cards-container" class="container">
+            <div class="intro-text">START THE GAME!</div>
+        </div>
+    </section>
+
+</div>
+
+
+<script src="js/lib/jquery-2.1.1.min.js"></script>
+<script src="js/lib/jquery-ui.min.js"></script>
+<script src="js/lib/bootstrap.min.js"></script>
+<script src="js/lib/json2.js"></script>
+<script src="js/lib/underscore.js"></script>
+<script src="js/lib/backbone.js"></script>
+<script src="js/lib/backbone.localStorage.js"></script>
+<script src="js/src/tools.js"></script>
+<script src="js/src/i18n.js"></script>
+<script src="js/src/config.js"></script>
+<script src="js/src/card-model.js"></script>
+<script src="js/src/card-collection.js"></script>
+<script src="js/src/card.js"></script>
+
+<script type="text/javascript" src="js/lib/jasmine-2.0.0/jasmine.js"></script>
+<script type="text/javascript" src="js/lib/jasmine-2.0.0/jasmine-html.js"></script>
+<script type="text/javascript" src="js/lib/jasmine-2.0.0/boot.js"></script>
+<script type="text/javascript" src="js/lib/jasmine-2.0.0/jasmine-jquery.js"></script>
+
+<script src="js/spec/SpecCard.js"></script>
+
+<script type="text/template" id="stats-template">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-4 col-md-5">
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-4">
+                        <%= cardNumberLbl %>: <strong id="card-number"><%= cardNumber %></strong>
+                    </div>
+                    <div class="col-md-4 hidden">
+                        <%= timeLbl %>: <strong id="time"><%= time %></strong>
+                    </div>
+                    <div class="col-md-4">
+                        <%= scoreLbl %>: <strong id="score"><%= score %></strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="card-template">
+
+    <div class="container" id="card-title-container">
+        <div class="col-md-offset-3 col-md-6 t-center bg-primary">
+            <h3><%= titleTxt %></h3>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="left-card" class="card-button" data-color="<%= card.colorTxt %>">
+                    <%= I18n[card.colorTxt] %>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="right-card" class="card-button <%= card.colorRandomCss %>" data-color="<%= card.colorRandomCss %>">
+                    <%= I18n[card.colorRandomTxt] %>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div id="correct-answer" class="col-md-8 t-center" data-correct-answer="<%= card.correctAnswer %>">
+                        <span class="glyphicon <%= card.correctAnswer %>" style="display: none;">&nbsp;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div id="meaning-txt" class="h6">
+                <%= meaningTxt %>
+            </div>
+            <div id="color-txt" class="h6">
+                <%= colorTxt %>
+            </div>
+        </div>
+    </div>
+
+    <div class="container answer-buttons">
+        <div class="row">
+            <div class="col-md-6">
+                <div data-answer="false" class="answer-button btn btn-danger pull-right">
+                    <%= noBtnTxt %>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div data-answer="true" class="answer-button btn btn-info">
+                    <%= yesBtnTxt %>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+</body>
+</html>

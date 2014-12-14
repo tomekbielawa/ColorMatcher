@@ -1,0 +1,113 @@
+.t-center {
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+h1 {
+  text-align: center;
+  font-family: Tahoma, Verdana, sans-serif;
+  color: #9d9d9d;
+}
+hr {
+  border-color: #9d9d9d;
+}
+.red {
+  color: #c12e2a;
+}
+.blue {
+  color: #66afe9;
+}
+.yellow {
+  color: #ffff00;
+}
+.black {
+  color: #000;
+}
+#start-button-container {
+  margin: 30px 0;
+}
+#start-button-container #start-game {
+  width: 200px;
+  margin: 0 auto;
+}
+#correct-answer {
+  margin-top: 55px;
+}
+#correct-answer span {
+  font-size: 68px;
+  text-align: center;
+}
+#correct-answer span.true:before {
+  content: "\e013";
+  color: #398439;
+}
+#correct-answer span.false:before {
+  content: "\e101";
+  color: #c12e2a;
+}
+#stats {
+  margin: 20px 0;
+}
+#card-title-container {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+#card-title-container h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#meaning-txt,
+#color-txt {
+  margin-top: 20px;
+  color: #555555;
+  float: left;
+  text-align: center;
+  text-transform: uppercase;
+}
+#meaning-txt {
+  width: 282px;
+  margin-left: 307px;
+}
+#color-txt {
+  width: 282px;
+}
+#cards-container {
+  margin-top: 40px;
+}
+#cards-container .intro-text {
+  text-align: center;
+}
+#cards-container .card-button {
+  min-width: 260px;
+  width: 260px;
+  height: 200px;
+  min-height: 200px;
+  border: solid 1px #444444;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: #ddd 2px 4px 6px 5px !important;
+  line-height: 185px;
+  font-size: 60px;
+  -webkit-transition: all 2s ease-out;
+  -moz-transition: all 2s ease-out;
+  -o-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+}
+#cards-container #left-card {
+  float: right;
+}
+#cards-container .answer-buttons {
+  margin: 40px 0;
+}
+#cards-container .answer-buttons .btn {
+  width: 200px !important;
+}

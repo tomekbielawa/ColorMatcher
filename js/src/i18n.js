@@ -1,0 +1,42 @@
+var i18n = {
+    "en": {
+        "cardNumber": "Card Number",
+        "time": "Time",
+        "score": "Score",
+        "title": "Does the meaning match the color text?",
+        "red": "red",
+        "blue": "blue",
+        "yellow": "yellow",
+        "black": "black",
+        "no": "no",
+        "yes": "yes",
+        "ok": "ok",
+        "wrong": "wrong!",
+        "meaningTxt": "Meaning",
+        "colorTxt": "Text Color",
+        "yesBtnTxt": "Yes",
+        "noBtnTxt": "No",
+        "gameResults": "Game results",
+        "startTheGame": "Start the games"
+    },
+    "pl": {
+        "cardNumber": "Numer karty",
+        "time": "Czas",
+        "score": "Punkty",
+        "title": "Czy kolor odpowiada nazwie?",
+        "red": "czerwony",
+        "blue": "niebieski",
+        "yellow": "żółty",
+        "black": "czarny",
+        "no": "nie",
+        "yes": "tak",
+        "ok": "ok",
+        "wrong": "źle!",
+        "meaningTxt": "Nazwa",
+        "colorTxt": "Kolor tekstu",
+        "yesBtnTxt": "Tak",
+        "noBtnTxt": "Nie",
+        "gameResults": "Wyniki",
+        "startTheGame": "Rozpocznij grę"
+    }
+};

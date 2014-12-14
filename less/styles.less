@@ -1,0 +1,116 @@
+@import "classes";
+@import "elements.less";
+
+@CARD_BTN_WIDTH:  260px;
+@CARD_BTN_SIZE:  200px;
+@CARD_BTN_BOX_SHADOW: '#ddd 2px 4px 6px 5px';
+
+h1 {
+    .t-center;
+    font-family: Tahoma, Verdana, sans-serif;
+    color: #9d9d9d;
+}
+
+hr {
+    border-color: #9d9d9d;
+}
+
+.red {
+    color: #c12e2a;
+}
+.blue {
+    color: #66afe9;
+}
+.yellow {
+    color: #ffff00;
+}
+.black {
+    color: #000;
+}
+
+#start-button-container {
+    margin: 30px 0;
+
+    #start-game {
+        width: 200px;
+        margin: 0 auto;
+    }
+}
+
+#correct-answer {
+    margin-top: 55px;
+
+    span {
+        font-size: 68px;
+        .t-center;
+    }
+    span.true:before {
+        content:"\e013";
+        color: #398439;
+    }
+    span.false:before {
+        content:"\e101";
+        color: #c12e2a;
+    }
+}
+
+#stats {
+    margin: 20px 0;
+}
+
+#card-title-container {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    h3 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+#meaning-txt, #color-txt {
+    margin-top: 20px;
+    color: #555555;
+    float: left;
+    .t-center;
+    text-transform: uppercase;
+}
+#meaning-txt {
+    width: 282px;
+    margin-left: 307px;
+}
+#color-txt {
+    width: 282px;
+}
+
+#cards-container {
+    margin-top: 40px;
+
+    .intro-text {
+        .t-center;
+    }
+    .card-button {
+        min-width: @CARD_BTN_WIDTH;
+        width: @CARD_BTN_WIDTH;
+        height: @CARD_BTN_SIZE;
+        min-height: @CARD_BTN_SIZE;
+        border: solid 1px #444444;
+        .rounded(5px);
+        .t-center;
+        box-shadow: #ddd 2px 4px 6px 5px !important;
+        line-height: 185px;
+        font-size: 60px;
+        .transition(2s, ease-out);
+    }
+    #left-card {
+        float: right;
+    }
+
+    .answer-buttons {
+        margin: 40px 0;
+
+        .btn {
+            width: 200px !important;
+        }
+    }
+}
